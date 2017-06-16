@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4E8AC91EF0D67000FD64FF /* RPGWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4E8AC81EF0D67000FD64FF /* RPGWeapon.m */; };
+		BF4E8ACD1EF0D6BA00FD64FF /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4E8ACC1EF0D6BA00FD64FF /* XMLDictionary.m */; };
+		BF4E8AD21EF0D98100FD64FF /* WeaponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4E8AD11EF0D98100FD64FF /* WeaponViewController.m */; };
+		BF4E8AD61EF0DE4400FD64FF /* Weapons.xml in Resources */ = {isa = PBXBuildFile; fileRef = BF4E8AD51EF0DE4400FD64FF /* Weapons.xml */; };
+		BF4E8AD91EF0E32000FD64FF /* weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = BF4E8AD81EF0E32000FD64FF /* weapons.json */; };
+		BF4E8ADB1EF0E4B700FD64FF /* weapons1.json in Resources */ = {isa = PBXBuildFile; fileRef = BF4E8ADA1EF0E4B700FD64FF /* weapons1.json */; };
 		BF7F4A971E6A52A000272613 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4A961E6A52A000272613 /* main.m */; };
 		BF7F4A9A1E6A52A000272613 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4A991E6A52A000272613 /* AppDelegate.m */; };
 		BF7F4A9D1E6A52A000272613 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4A9C1E6A52A000272613 /* ViewController.m */; };
 		BF7F4AA01E6A52A000272613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F4A9E1E6A52A000272613 /* Main.storyboard */; };
 		BF7F4AA21E6A52A000272613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F4AA11E6A52A000272613 /* Assets.xcassets */; };
 		BF7F4AA51E6A52A000272613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F4AA31E6A52A000272613 /* LaunchScreen.storyboard */; };
+		BFD5C8C61E7F34D7003A3EE6 /* Weapons1.xml in Resources */ = {isa = PBXBuildFile; fileRef = BFD5C8C51E7F34D7003A3EE6 /* Weapons1.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF4E8AC71EF0D67000FD64FF /* RPGWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGWeapon.h; sourceTree = "<group>"; };
+		BF4E8AC81EF0D67000FD64FF /* RPGWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGWeapon.m; sourceTree = "<group>"; };
+		BF4E8ACB1EF0D6BA00FD64FF /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		BF4E8ACC1EF0D6BA00FD64FF /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		BF4E8AD01EF0D98100FD64FF /* WeaponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponViewController.h; sourceTree = "<group>"; };
+		BF4E8AD11EF0D98100FD64FF /* WeaponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponViewController.m; sourceTree = "<group>"; };
+		BF4E8AD51EF0DE4400FD64FF /* Weapons.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Weapons.xml; sourceTree = "<group>"; };
+		BF4E8AD81EF0E32000FD64FF /* weapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = weapons.json; path = ../../Resources/weapons.json; sourceTree = "<group>"; };
+		BF4E8ADA1EF0E4B700FD64FF /* weapons1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weapons1.json; sourceTree = "<group>"; };
 		BF7F4A921E6A52A000272613 /* SWRPG_Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWRPG_Viewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F4A961E6A52A000272613 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF7F4A981E6A52A000272613 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +42,7 @@
 		BF7F4AA11E6A52A000272613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7F4AA41E6A52A000272613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7F4AA61E6A52A000272613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD5C8C51E7F34D7003A3EE6 /* Weapons1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Weapons1.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +56,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF4E8ACA1EF0D6BA00FD64FF /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8ACB1EF0D6BA00FD64FF /* XMLDictionary.h */,
+				BF4E8ACC1EF0D6BA00FD64FF /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		BF4E8ACE1EF0D88000FD64FF /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8AC71EF0D67000FD64FF /* RPGWeapon.h */,
+				BF4E8AC81EF0D67000FD64FF /* RPGWeapon.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		BF4E8ACF1EF0D90C00FD64FF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8AD81EF0E32000FD64FF /* weapons.json */,
+				BF4E8AD01EF0D98100FD64FF /* WeaponViewController.h */,
+				BF4E8AD11EF0D98100FD64FF /* WeaponViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		BF7F4A891E6A529F00272613 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +103,8 @@
 		BF7F4A941E6A52A000272613 /* SWRPG_Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				BFD5C8C41E7F3405003A3EE6 /* Classes */,
+				BFD5C8C31E7F33FA003A3EE6 /* Frameworks */,
 				BF7F4A981E6A52A000272613 /* AppDelegate.h */,
 				BF7F4A991E6A52A000272613 /* AppDelegate.m */,
 				BF7F4A9B1E6A52A000272613 /* ViewController.h */,
@@ -74,9 +121,53 @@
 		BF7F4A951E6A52A000272613 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFD5C8C01E7F33BB003A3EE6 /* Resources */,
 				BF7F4A961E6A52A000272613 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFD5C8C01E7F33BB003A3EE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8ADA1EF0E4B700FD64FF /* weapons1.json */,
+				BFD5C8C21E7F33D3003A3EE6 /* Images */,
+				BFD5C8C11E7F33C7003A3EE6 /* XML */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFD5C8C11E7F33C7003A3EE6 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8AD51EF0DE4400FD64FF /* Weapons.xml */,
+				BFD5C8C51E7F34D7003A3EE6 /* Weapons1.xml */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		BFD5C8C21E7F33D3003A3EE6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		BFD5C8C31E7F33FA003A3EE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8ACA1EF0D6BA00FD64FF /* XMLDictionary */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFD5C8C41E7F3405003A3EE6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E8ACF1EF0D90C00FD64FF /* View Controllers */,
+				BF4E8ACE1EF0D88000FD64FF /* Objects */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +201,7 @@
 				TargetAttributes = {
 					BF7F4A911E6A529F00272613 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3BW9B69GL7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,8 +230,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7F4AA51E6A52A000272613 /* LaunchScreen.storyboard in Resources */,
+				BF4E8AD91EF0E32000FD64FF /* weapons.json in Resources */,
 				BF7F4AA21E6A52A000272613 /* Assets.xcassets in Resources */,
 				BF7F4AA01E6A52A000272613 /* Main.storyboard in Resources */,
+				BFD5C8C61E7F34D7003A3EE6 /* Weapons1.xml in Resources */,
+				BF4E8AD61EF0DE4400FD64FF /* Weapons.xml in Resources */,
+				BF4E8ADB1EF0E4B700FD64FF /* weapons1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4E8AC91EF0D67000FD64FF /* RPGWeapon.m in Sources */,
 				BF7F4A9D1E6A52A000272613 /* ViewController.m in Sources */,
+				BF4E8AD21EF0D98100FD64FF /* WeaponViewController.m in Sources */,
 				BF7F4A9A1E6A52A000272613 /* AppDelegate.m in Sources */,
 				BF7F4A971E6A52A000272613 /* main.m in Sources */,
+				BF4E8ACD1EF0D6BA00FD64FF /* XMLDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +371,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3BW9B69GL7;
 				INFOPLIST_FILE = SWRPG_Viewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ingyApps.SWRPG-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,7 +384,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3BW9B69GL7;
 				INFOPLIST_FILE = SWRPG_Viewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ingyApps.SWRPG-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +412,7 @@
 				BF7F4AAB1E6A52A000272613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
