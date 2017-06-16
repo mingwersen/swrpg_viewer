@@ -118,7 +118,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 
 -(void)loadTableView{
-   // xmlWeapons = [self JSONFromFile];
+    xmlWeapons = [self JSONFromFile];
     NSInteger *count = [xmlWeapons count];
     
     if (count > 0)
