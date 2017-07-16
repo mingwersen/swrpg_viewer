@@ -16,8 +16,10 @@
 @property NSString* weaponKey;
 @property NSString* weaponDescription;
 @property NSString* weaponQuality;
+
+@property NSString* damage;
+@property int hardPoints;
 @property int encumberance;
-@property int damage;
 @property int critLevel;
 @property NSString* rangedLevel;
 

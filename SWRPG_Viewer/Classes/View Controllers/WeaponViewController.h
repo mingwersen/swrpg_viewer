@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "RPGWeapon.h"
 
-@interface WeaponViewController : UIViewController
+@interface WeaponViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, weak) IBOutlet UITableView *tableItems;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *actLoading;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 
 
 @end

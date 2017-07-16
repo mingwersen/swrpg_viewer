@@ -21,17 +21,85 @@
 
 @implementation WeaponViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Weapons" ofType:@"xml"];
     xmlWeapons = [NSDictionary dictionaryWithXMLFile:filePath];
-    for(NSString *key in [xmlWeapons allKeys]) {
-        NSLog(@"%@",[xmlWeapons objectForKey:key]);
+   for(NSString *key in [xmlWeapons allKeys]) {
+        NSLog(@"KEY?%@",[xmlWeapons objectForKey:key]);
     }
    
-    //[self readDataFromFile];
-    [self loadTableView];
+   // [self readDataFromFile];
+   // [self loadTableView];
+    
+    int *count = [xmlWeapons count];
+    
+    if (count > 0)
+    {
+        listOfItems = [[NSMutableArray alloc] init]; //Re-init and clear
+        
+        NSArray *items = [xmlWeapons objectForKey:@"Weapon"];
+        //  NSLog(@"weapons: %@", items);
+        
+        for (NSDictionary * dataDict in items)
+        {
+            
+            NSString *name = [dataDict objectForKey:@"Name"];
+            NSString *key = [dataDict objectForKey:@"Key"];
+            NSString *description = [dataDict objectForKey:@"Description"];
+            NSString *damage = [dataDict objectForKey:@"Damage"];
+            NSString *critical = [dataDict objectForKey:@"Crit"];
+            NSString *hardPoints = [dataDict objectForKey:@"HP"];
+            NSString *price = [dataDict objectForKey:@"Price"];
+            NSString *rarity = [dataDict objectForKey:@"Rarity"];
+            
+            RPGWeapon  *Result = [[RPGWeapon alloc]init];
+            
+            Result.weaponName = name;
+            Result.weaponKey = key;
+            Result.weaponDescription = description;
+            Result.damage = damage;
+            Result.critLevel = critical;
+            Result.hardPoints = hardPoints;
+            
+            
+            
+            [listOfItems addObject:Result];
+            
+            [self.tableItems reloadData]; //refresh and loop again
+        }
+    }
+   
+    self.tableItems.delegate = self;
+    self.tableItems.dataSource = self;
+    
+    for(UIView *subView in [self.searchBar subviews]) {
+        if([subView conformsToProtocol:@protocol(UITextInputTraits)]) {
+            [(UITextField *)subView setReturnKeyType: UIReturnKeyDone];
+            // always force return key to be enabled
+            [(UITextField *)subView setEnablesReturnKeyAutomatically:NO];
+        } else {
+            for(UIView *subSubView in [subView subviews]) {
+                if([subSubView conformsToProtocol:@protocol(UITextInputTraits)]) {
+                    [(UITextField *)subSubView setReturnKeyType: UIReturnKeyDone];
+                    [(UITextField *)subSubView setEnablesReturnKeyAutomatically:NO];
+                }
+            }
+        }
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +111,8 @@
 
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   
+    RPGWeapon *eResult = [listOfItems objectAtIndex:indexPath.row];
+    NSLog(@"WEAPON RESULt %@", eResult.weaponName );
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -79,7 +148,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    
     RPGWeapon *e = [listOfItems objectAtIndex:indexPath.row];
     
     UILabel *name = (UILabel *)[cell viewWithTag:100];
@@ -89,13 +157,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     name.text = e.weaponName;
     description.text = e.weaponDescription;
-    damage.text = [NSString stringWithFormat:@"%d",damage];
+    damage.text = [NSString stringWithFormat:@"Damage: %@", e.damage];
     key.text = e.weaponKey;
     
-    
+    NSLog(@"Weapon_Name= %@", e.weaponName);
     
     
     // Fix for iOS 7 to clear backgroundColor
+    cell.textColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor clearColor];
     cell.backgroundView = [UIView new];
     cell.selectedBackgroundView = [UIView new];
@@ -116,17 +185,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 
 
-
+/*
 -(void)loadTableView{
-    xmlWeapons = [self JSONFromFile];
+   // xmlWeapons = [self JSONFromFile];
     NSInteger *count = [xmlWeapons count];
     
     if (count > 0)
     {
         listOfItems = [[NSMutableArray alloc] init]; //Re-init and clear
         
-        NSArray *items = [xmlWeapons objectForKey:@"weapons"];
-        NSLog(@"weapons: %@", items);
+        NSArray *items = [xmlWeapons objectForKey:@"weapon"];
+      //  NSLog(@"weapons: %@", items);
         
         for (NSDictionary * dataDict in items)
         {
@@ -134,7 +203,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             NSString *name = [dataDict objectForKey:@"name"];
             NSString *key = [dataDict objectForKey:@"key"];
             NSString *description = [dataDict objectForKey:@"description"];
-            NSInteger *damage = [[dataDict objectForKey:@"damage"]integerValue];
+            NSString *damage = [[dataDict objectForKey:@"damage"]integerValue];
          
             
             RPGWeapon  *Result = [[RPGWeapon alloc]init];
@@ -153,6 +222,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     }
     
 }
+ */
 
 -(void)readDataFromFile
 {
